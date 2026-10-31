@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SugarKill — Investor Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                navy: '#0B1F3A',
+                emerald: '#10B981',
+                brightblue: '#2563EB',
+                teal: '#14B8A6',
+                mint: '#6EE7B7',
+                lightblue: '#60A5FA',
+                lavender: '#A5B4FC',
+                amber: '#F59E0B',
+                ink: '#334155',
+                panel: '#EEF4FB',
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .slide {
+        width: 1280px;
+        height: 720px;
+        display: none;
+      }
+      .slide.active {
+        display: flex;
+      }
+      @media print {
+        .slide {
+          display: flex !important;
+          page-break-after: always;
+        }
+        .nav,
+        .progress {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-brand-panel font-sans">
+    <!-- ============ SLIDE 1 — COVER ============ -->
+    <div class="slide active flex-row bg-white">
+      <div class="w-7/12 flex flex-col justify-center p-16">
+        <div class="inline-flex items-center gap-2 mb-8">
+          <span class="h-2 w-10 rounded-full bg-brand-emerald"></span>
+          <span class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal">Investor Pitch · 2026</span>
+        </div>
+        <h1 class="text-8xl font-extrabold tracking-tight text-brand-navy text-pretty mb-5">SUGARKILL</h1>
+        <p class="text-2xl font-bold uppercase tracking-[0.25em] text-brand-emerald mb-8">Less Sugar. More Life.</p>
+        <p class="text-xl text-brand-ink leading-relaxed max-w-xl mb-12">
+          Making healthier eating easier through intelligent food tracking and better daily habits.
+        </p>
+        <div class="flex items-center gap-8 text-sm text-brand-ink">
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-brand-lightblue">Founder</p>
+            <p class="font-bold text-brand-navy">Murtaza Raza</p>
+          </div>
+          <div class="h-8 w-px bg-brand-lightblue/60"></div>
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-brand-lightblue">Based in</p>
+            <p class="font-bold text-brand-navy">Pakistan</p>
+          </div>
+          <div class="h-8 w-px bg-brand-lightblue/60"></div>
+          <div>
+            <p class="text-[11px] uppercase tracking-widest text-brand-lightblue">Stage</p>
+            <p class="font-bold text-brand-navy">Android MVP · Internal testing</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-5/12 relative flex items-center justify-center bg-brand-panel overflow-hidden">
+        <div class="absolute -top-16 -right-16 h-72 w-72 rounded-full bg-brand-mint/50"></div>
+        <div class="absolute bottom-10 left-8 h-24 w-24 rounded-full bg-brand-lavender/50"></div>
+        <img src="https://assets.supernormal.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUEZsY2dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bab9c254376d4442b7258c550ce35a8d321e6b51/generated_1793380337_4aec9c83.png" class="relative z-10 w-80 h-80 object-contain" alt="SugarKill conceptual illustration" />
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 2 — THE PROBLEM ============ -->
+    <div class="slide flex-col justify-center bg-white p-16">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-3">The Problem</p>
+      <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-3 max-w-4xl">
+        We consume sugar without always realizing how much.
+      </h2>
+      <p class="text-lg text-brand-ink mb-10 max-w-3xl">Three everyday frictions make sugar one of the hardest things to manage.</p>
+      <div class="grid grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-brand-panel p-7 border border-brand-lightblue/40">
+          <div class="h-12 w-12 rounded-xl bg-brand-emerald flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.243 4.243L9.88 9.88" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy text-pretty mb-2">Hidden Sugar</h3>
+          <p class="text-base text-brand-ink leading-relaxed">Sugar hides in everyday foods and drinks people never expect it to be in.</p>
+        </div>
+        <div class="rounded-2xl bg-brand-panel p-7 border border-brand-lightblue/40">
+          <div class="h-12 w-12 rounded-xl bg-brand-teal flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy text-pretty mb-2">Limited Awareness</h3>
+          <p class="text-base text-brand-ink leading-relaxed">Most people simply don't know how much sugar they take in across a single day.</p>
+        </div>
+        <div class="rounded-2xl bg-brand-panel p-7 border border-brand-lightblue/40">
+          <div class="h-12 w-12 rounded-xl bg-brand-brightblue flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-brand-navy text-pretty mb-2">Difficult Tracking</h3>
+          <p class="text-base text-brand-ink leading-relaxed">Traditional food logging is slow, tedious, and hard to keep up for more than a few days.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 3 — SCALE OF THE PROBLEM ============ -->
+    <div class="slide flex-col justify-center bg-white p-14">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-2">The Scale of the Problem</p>
+      <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-6">A global health challenge — close to home.</h2>
+      <div class="grid grid-cols-5 gap-4 mb-5">
+        <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+          <p class="text-4xl font-extrabold text-brand-emerald">589M</p>
+          <p class="text-[13px] text-brand-ink leading-snug mt-1"><strong>adults (20–79) worldwide</strong> living with diabetes (2024)</p>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+          <p class="text-4xl font-extrabold text-brand-emerald">1 in 9</p>
+          <p class="text-[13px] text-brand-ink leading-snug mt-1"><strong>adults globally</strong> now live with diabetes (2024)</p>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+          <p class="text-4xl font-extrabold text-brand-emerald">853M</p>
+          <p class="text-[13px] text-brand-ink leading-snug mt-1"><strong>adults projected</strong> to live with diabetes by 2050</p>
+        </div>
+        <div class="rounded-xl bg-brand-navy p-5 border border-brand-navy">
+          <p class="text-4xl font-extrabold text-brand-mint">~33M</p>
+          <p class="text-[13px] text-brand-lightblue leading-snug mt-1"><strong>adults in Pakistan</strong> living with diabetes — among the most of any country</p>
+        </div>
+        <div class="rounded-xl bg-brand-navy p-5 border border-brand-navy">
+          <p class="text-4xl font-extrabold text-brand-mint">~31%</p>
+          <p class="text-[13px] text-brand-lightblue leading-snug mt-1"><strong>adult diabetes prevalence in Pakistan</strong> — one of the highest rates in the world</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-5 rounded-xl bg-brand-teal p-5 mb-3">
+        <div class="shrink-0">
+          <p class="text-[10px] font-bold uppercase tracking-widest text-white/80 mb-1">WHO Free-Sugar Guidance</p>
+          <p class="text-lg font-bold text-white">Keep free sugars under 10% of daily calories</p>
+        </div>
+        <div class="h-10 w-px bg-white/30"></div>
+        <div class="flex items-center gap-6 text-white">
+          <div><p class="text-2xl font-extrabold text-white">&lt;10%</p><p class="text-[11px] text-white/80">of daily energy</p></div>
+          <div><p class="text-2xl font-extrabold text-white">≈50g</p><p class="text-[11px] text-white/80">on 2,000 kcal/day</p></div>
+          <div><p class="text-2xl font-extrabold text-white">≈12 tsp</p><p class="text-[11px] text-white/80">level teaspoons</p></div>
+        </div>
+        <p class="ml-auto text-[11px] text-white/80 max-w-[200px] leading-snug">Free sugars = added sugars plus those in honey, syrups & fruit juice.</p>
+      </div>
+      <p class="text-[12px] text-brand-ink font-semibold mb-1">These are public-health context figures — not SugarKill's user base or market size.</p>
+      <p class="text-[10px] text-brand-lightblue leading-snug">Sources: IDF Diabetes Atlas, 11th edition (2025), diabetesatlas.org (global and Pakistan figures). WHO Healthy Diet fact sheet, who.int/news-room/fact-sheets/detail/healthy-diet (free-sugar guidance). Diabetes is a complex, multifactorial disease; these figures do not imply sugar alone is a cause.</p>
+    </div>
+
+    <!-- ============ SLIDE 4 — INTRODUCING SUGARKILL ============ -->
+    <div class="slide flex-row bg-white">
+      <div class="w-7/12 flex flex-col justify-center p-16">
+        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-3">Introducing SugarKill</p>
+        <h2 class="text-5xl font-bold text-brand-navy text-pretty mb-3">Awareness is only the first step.</h2>
+        <p class="text-lg text-brand-ink leading-relaxed mb-8 max-w-lg">People don't just need more nutrition information — they need an easier way to understand food and turn choices into habits.</p>
+        <div class="flex items-stretch gap-3 mb-8">
+          <div class="flex-1 rounded-2xl border-2 border-brand-brightblue bg-brand-panel p-5">
+            <span class="text-sm font-bold text-brand-brightblue">01</span>
+            <h3 class="text-xl font-bold text-brand-navy text-pretty mt-1 mb-1">KNOW</h3>
+            <p class="text-sm text-brand-ink leading-snug">See what's in your food, instantly.</p>
+          </div>
+          <div class="flex items-center"><svg class="w-6 h-6 text-brand-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></div>
+          <div class="flex-1 rounded-2xl border-2 border-brand-teal bg-brand-panel p-5">
+            <span class="text-sm font-bold text-brand-teal">02</span>
+            <h3 class="text-xl font-bold text-brand-navy text-pretty mt-1 mb-1">CHOOSE</h3>
+            <p class="text-sm text-brand-ink leading-snug">Make better, lower-sugar choices.</p>
+          </div>
+          <div class="flex items-center"><svg class="w-6 h-6 text-brand-emerald" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg></div>
+          <div class="flex-1 rounded-2xl border-2 border-brand-emerald bg-emerald-50 p-5">
+            <span class="text-sm font-bold text-brand-emerald">03</span>
+            <h3 class="text-xl font-bold text-brand-navy text-pretty mt-1 mb-1">IMPROVE</h3>
+            <p class="text-sm text-brand-ink leading-snug">Build consistency into habits.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+          <div class="flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-brand-brightblue text-white flex items-center justify-center font-bold text-xs">1</span><span class="text-brand-navy font-semibold">Scan it</span></div>
+          <div class="flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-brand-teal text-white flex items-center justify-center font-bold text-xs">2</span><span class="text-brand-navy font-semibold">See it</span></div>
+          <div class="flex items-center gap-2"><span class="h-8 w-8 rounded-full bg-brand-emerald text-white flex items-center justify-center font-bold text-xs">3</span><span class="text-brand-navy font-semibold">Improve it</span></div>
+        </div>
+      </div>
+      <div class="w-5/12 relative flex items-center justify-center bg-brand-panel overflow-hidden">
+        <div class="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-brand-mint/50"></div>
+        <div class="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-brand-lavender/50"></div>
+        <img src="https://assets.supernormal.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUE5sY2dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6916855d31da36c6c04d2a3a19d945d0a3fcf1ae/generated_1793380343_0915ba4b.png" class="relative z-10 h-[480px] object-contain drop-shadow-xl" alt="Conceptual mockup of the SugarKill app home screen" />
+        <span class="absolute bottom-5 right-5 z-10 text-[10px] text-brand-ink bg-white/80 px-2 py-1 rounded">Conceptual mockup</span>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 5 — FEATURE: AI FOOD ID ============ -->
+    <div class="slide flex-row bg-white">
+      <div class="w-8/12 flex flex-col justify-center p-16">
+        <div class="flex items-center gap-3 mb-3">
+          <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal">Product Feature</p>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-brand-emerald px-2 py-0.5 rounded-full">In MVP · Internal testing</span>
+        </div>
+        <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-8">Just take a picture.</h2>
+        <div class="grid grid-cols-4 gap-3 mb-6">
+          <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+            <span class="text-xs font-bold text-brand-brightblue">STEP 1</span>
+            <p class="text-base font-bold text-brand-navy mt-1 mb-1">Photograph</p>
+            <p class="text-[13px] text-brand-ink leading-snug">Snap a photo of the food or drink.</p>
+          </div>
+          <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+            <span class="text-xs font-bold text-brand-brightblue">STEP 2</span>
+            <p class="text-base font-bold text-brand-navy mt-1 mb-1">AI assists</p>
+            <p class="text-[13px] text-brand-ink leading-snug">AI helps identify what the food likely is.</p>
+          </div>
+          <div class="rounded-xl bg-brand-panel p-5 border border-brand-lightblue/40">
+            <span class="text-xs font-bold text-brand-brightblue">STEP 3</span>
+            <p class="text-base font-bold text-brand-navy mt-1 mb-1">Nutrition shown</p>
+            <p class="text-[13px] text-brand-ink leading-snug">Sugar, calories, carbs, protein & fat appear.</p>
+          </div>
+          <div class="rounded-xl bg-emerald-50 p-5 border border-brand-emerald/40">
+            <span class="text-xs font-bold text-brand-emerald">STEP 4</span>
+            <p class="text-base font-bold text-brand-navy mt-1 mb-1">Review & log</p>
+            <p class="text-[13px] text-brand-ink leading-snug">You confirm, adjust, and save it.</p>
+          </div>
+        </div>
+        <div class="rounded-lg border-l-4 border-brand-amber bg-amber-50 px-5 py-3">
+          <p class="text-sm text-brand-ink"><strong class="text-brand-navy">AI-assisted estimates, reviewed by the user before logging</strong> — not a substitute for verified nutrition labels.</p>
+        </div>
+      </div>
+      <div class="w-4/12 relative flex items-center justify-center bg-brand-panel overflow-hidden">
+        <div class="absolute -top-14 -right-14 h-56 w-56 rounded-full bg-brand-lightblue/40"></div>
+        <img src="https://assets.supernormal.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFJsY2dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7b63db1b9432388087c796e4b22068b2b78ae353/generated_1793380349_9fa6ff00.png" class="relative z-10 h-[460px] object-contain drop-shadow-xl" alt="Conceptual mockup of AI food identification" />
+        <span class="absolute bottom-5 right-5 z-10 text-[10px] text-brand-ink bg-white/80 px-2 py-1 rounded">Conceptual mockup</span>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 6 — FEATURE: GAMIFICATION & PROGRESSION ============ -->
+    <div class="slide flex-row bg-white">
+      <div class="w-1/2 flex flex-col justify-center p-16">
+        <div class="flex items-center gap-3 mb-3">
+          <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal">Product Feature</p>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-brand-brightblue px-2 py-0.5 rounded-full">In MVP · Single-user</span>
+        </div>
+        <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-5">Progress that keeps you going.</h2>
+        <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-2">Progression levels</p>
+        <div class="flex items-center gap-2 mb-5">
+          <div class="flex-1 rounded-lg bg-brand-panel border border-brand-lightblue/40 px-3 py-2 text-center">
+            <p class="text-sm font-bold text-brand-brightblue">Starter</p>
+            <p class="text-[11px] text-brand-ink">Build the basics</p>
+          </div>
+          <svg class="w-4 h-4 text-brand-teal shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          <div class="flex-1 rounded-lg bg-brand-panel border border-brand-lightblue/40 px-3 py-2 text-center">
+            <p class="text-sm font-bold text-brand-teal">Builder</p>
+            <p class="text-[11px] text-brand-ink">Stay consistent</p>
+          </div>
+          <svg class="w-4 h-4 text-brand-emerald shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          <div class="flex-1 rounded-lg bg-emerald-50 border border-brand-emerald/50 px-3 py-2 text-center">
+            <p class="text-sm font-bold text-brand-emerald">Champion</p>
+            <p class="text-[11px] text-brand-ink">Master the habit</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3 mb-5">
+          <div class="flex items-center gap-2 text-brand-ink"><span class="h-2 w-2 rounded-full bg-brand-emerald"></span><span class="text-base">Daily goals</span></div>
+          <div class="flex items-center gap-2 text-brand-ink"><span class="h-2 w-2 rounded-full bg-brand-teal"></span><span class="text-base">Streaks</span></div>
+          <div class="flex items-center gap-2 text-brand-ink"><span class="h-2 w-2 rounded-full bg-brand-brightblue"></span><span class="text-base">Badges & rewards</span></div>
+          <div class="flex items-center gap-2 text-brand-ink"><span class="h-2 w-2 rounded-full bg-brand-lavender"></span><span class="text-base">Progress tracking</span></div>
+        </div>
+        <div class="rounded-lg border-l-4 border-brand-amber bg-amber-50 px-5 py-3">
+          <p class="text-sm text-brand-ink"><strong class="text-brand-navy">Leaderboards are designed but not yet live</strong> — they require a multi-user backend that has not been built yet. Shown here for illustration.</p>
+        </div>
+      </div>
+      <div class="w-1/2 flex flex-col justify-center bg-brand-panel p-12">
+        <div class="space-y-4">
+          <div class="flex gap-4">
+            <div class="flex-1 rounded-2xl bg-white p-5 shadow-sm border border-brand-lightblue/40">
+              <p class="text-[11px] uppercase tracking-widest text-brand-lightblue mb-1">Current streak</p>
+              <div class="flex items-end gap-2"><p class="text-4xl font-extrabold text-brand-emerald">14</p><p class="text-base text-brand-ink pb-1">days</p></div>
+            </div>
+            <div class="flex-1 rounded-2xl bg-white p-5 shadow-sm border border-brand-lightblue/40 flex flex-col justify-center">
+              <p class="text-[11px] uppercase tracking-widest text-brand-lightblue mb-2">Badges</p>
+              <div class="flex gap-2">
+                <span class="h-8 w-8 rounded-full bg-brand-mint flex items-center justify-center text-sm">⭐</span>
+                <span class="h-8 w-8 rounded-full bg-brand-lavender/60 flex items-center justify-center text-sm">🔥</span>
+                <span class="h-8 w-8 rounded-full bg-brand-lightblue/50 flex items-center justify-center text-sm">🏅</span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl bg-white p-5 shadow-sm border border-brand-lightblue/40">
+            <div class="flex justify-between mb-2"><p class="text-sm font-bold text-brand-navy">Daily sugar goal</p><p class="text-sm text-brand-emerald font-bold">72%</p></div>
+            <div class="h-3 w-full rounded-full bg-brand-panel"><div class="h-3 rounded-full bg-brand-emerald" style="width:72%"></div></div>
+          </div>
+          <div class="rounded-2xl bg-white p-5 shadow-sm border border-brand-lightblue/40 relative">
+            <div class="flex items-center justify-between mb-3">
+              <p class="text-[11px] uppercase tracking-widest text-brand-lightblue">Leaderboard</p>
+              <span class="text-[9px] font-bold uppercase tracking-wider text-brand-amber bg-amber-50 px-2 py-0.5 rounded-full">Planned · needs multi-user backend</span>
+            </div>
+            <div class="space-y-2 text-sm opacity-70">
+              <div class="flex items-center justify-between"><span class="text-brand-navy font-bold">1 · Ayesha</span><span class="text-brand-ink">980 pts</span></div>
+              <div class="flex items-center justify-between"><span class="text-brand-navy font-bold">2 · You</span><span class="text-brand-ink">910 pts</span></div>
+              <div class="flex items-center justify-between"><span class="text-brand-ink">3 · Bilal</span><span class="text-brand-ink">845 pts</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-4 text-center text-[10px] text-brand-ink/60">Conceptual. Streaks, badges & goals work single-user today; leaderboards are illustrative only.</p>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 7 — FEATURE: BEYOND FOOD ============ -->
+    <div class="slide flex-row bg-white">
+      <div class="w-8/12 flex flex-col justify-center p-16">
+        <div class="flex items-center gap-3 mb-3">
+          <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal">Product Feature</p>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-white bg-brand-teal px-2 py-0.5 rounded-full">In MVP · Expanding</span>
+        </div>
+        <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-6">More than food tracking.</h2>
+
+        <div class="rounded-2xl bg-brand-panel p-5 border border-brand-lightblue/40 mb-5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-9 w-9 rounded-lg bg-brand-emerald flex items-center justify-center">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <h3 class="text-lg font-bold text-brand-navy">Exercise system</h3>
+          </div>
+          <p class="text-[13px] text-brand-ink leading-snug">Log workouts and daily activity alongside food, so users see the full picture of energy in and energy out — and how movement supports their goals.</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-brand-panel p-5 border border-brand-lightblue/40">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-3">Four health-focus categories</p>
+            <div class="grid grid-cols-2 gap-2 text-[13px] text-brand-ink">
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-emerald"></span>Weight management</div>
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-teal"></span>Blood-sugar awareness</div>
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-brightblue"></span>Active & fitness</div>
+              <div class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-lavender"></span>General wellness</div>
+            </div>
+            <p class="text-[11px] text-brand-ink/70 mt-3 leading-snug">Users pick a focus; the app tailors goals and guidance around it.</p>
+          </div>
+          <div class="rounded-2xl bg-brand-panel p-5 border border-brand-lightblue/40">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-3">Three app themes</p>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="flex flex-col items-center gap-1"><span class="h-9 w-9 rounded-lg bg-white border border-brand-lightblue/60"></span><span class="text-[11px] text-brand-ink">Light</span></div>
+              <div class="flex flex-col items-center gap-1"><span class="h-9 w-9 rounded-lg bg-brand-navy"></span><span class="text-[11px] text-brand-ink">Dark</span></div>
+              <div class="flex flex-col items-center gap-1"><span class="h-9 w-9 rounded-lg bg-gradient-to-br from-brand-teal to-brand-lavender"></span><span class="text-[11px] text-brand-ink">Auto</span></div>
+            </div>
+            <p class="text-[11px] text-brand-ink/70 leading-snug">Personalization that makes the app feel like the user's own.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-4/12 relative flex items-center justify-center bg-brand-panel overflow-hidden">
+        <div class="absolute -bottom-14 -left-14 h-56 w-56 rounded-full bg-brand-mint/50"></div>
+        <img src="https://assets.supernormal.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUFpsY2dFPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f124fcd6ed7eea50e6b14724216f624fecbfb019/generated_1793380355_9f17b3f1.png" class="relative z-10 h-[460px] object-contain drop-shadow-xl" alt="Conceptual mockup of exercise tracking and app themes" />
+        <span class="absolute bottom-5 right-5 z-10 text-[10px] text-brand-ink bg-white/80 px-2 py-1 rounded">Conceptual mockup</span>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 8 — HOW IT WORKS / TECH STACK ============ -->
+    <div class="slide flex-col justify-center bg-white p-16">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-3">How It Works · Technology</p>
+      <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-8">The stack behind the MVP.</h2>
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <div class="h-10 w-10 rounded-lg bg-brand-brightblue flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+          </div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-brightblue">Client</p>
+          <p class="text-base font-bold text-brand-navy mt-1 mb-1">Flutter · Android</p>
+          <p class="text-[12px] text-brand-ink leading-snug">Cross-platform codebase, Android MVP first.</p>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <div class="h-10 w-10 rounded-lg bg-brand-teal flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" /><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" /></svg>
+          </div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-teal">Food ID</p>
+          <p class="text-base font-bold text-brand-navy mt-1 mb-1">AI vision model</p>
+          <p class="text-[12px] text-brand-ink leading-snug">Image-to-food identification from a photo.</p>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <div class="h-10 w-10 rounded-lg bg-brand-emerald flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75" /></svg>
+          </div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-emerald">Nutrition data</p>
+          <p class="text-base font-bold text-brand-navy mt-1 mb-1">Nutrition database</p>
+          <p class="text-[12px] text-brand-ink leading-snug">Maps identified foods to sugar & macros.</p>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <div class="h-10 w-10 rounded-lg bg-brand-lavender flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+          </div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-lavender">Data layer</p>
+          <p class="text-base font-bold text-brand-navy mt-1 mb-1">Local-first storage</p>
+          <p class="text-[12px] text-brand-ink leading-snug">On-device today; multi-user backend planned next.</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-2 rounded-xl bg-brand-navy px-6 py-4">
+        <p class="text-sm font-bold text-white">User photo</p>
+        <svg class="w-4 h-4 text-brand-mint" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        <p class="text-sm font-bold text-white">AI identifies food</p>
+        <svg class="w-4 h-4 text-brand-mint" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        <p class="text-sm font-bold text-white">Nutrition mapped</p>
+        <svg class="w-4 h-4 text-brand-mint" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        <p class="text-sm font-bold text-white">User reviews & logs</p>
+        <svg class="w-4 h-4 text-brand-emerald" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        <p class="text-sm font-bold text-brand-mint">Progress & habits</p>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 9 — MARKET OPPORTUNITY ============ -->
+    <div class="slide flex-row bg-white p-14">
+      <div class="w-1/2 flex flex-col justify-center pr-6">
+        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-2">Market Opportunity</p>
+        <h2 class="text-3xl font-bold text-brand-navy text-pretty mb-6">An opportunity to build something big.</h2>
+        <div class="relative h-[360px] flex items-center justify-center">
+          <div class="absolute rounded-full bg-brand-lightblue/30 flex items-start justify-center" style="width:340px;height:340px;">
+            <p class="mt-3 text-center"><span class="block text-[10px] uppercase tracking-widest text-brand-ink">TAM</span><span class="block text-base font-bold text-brand-navy">$2.1B → $4.6B</span></p>
+          </div>
+          <div class="absolute rounded-full bg-brand-teal/40 flex items-start justify-center" style="width:230px;height:230px;top:95px;">
+            <p class="mt-3 text-center"><span class="block text-[10px] uppercase tracking-widest text-brand-ink">SAM</span><span class="block text-sm font-bold text-brand-navy">~$1.0B</span></p>
+          </div>
+          <div class="absolute rounded-full bg-brand-navy flex items-center justify-center" style="width:120px;height:120px;top:180px;">
+            <p class="text-center"><span class="block text-[10px] uppercase tracking-widest text-brand-mint">SOM</span><span class="block text-xs font-bold text-white">Illustrative</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="w-1/2 flex flex-col justify-center pl-4 space-y-3">
+        <div class="rounded-lg bg-brand-panel p-4 border border-brand-lightblue/40">
+          <p class="text-sm font-bold text-brand-navy">TAM — Global diet &amp; nutrition apps</p>
+          <p class="text-[13px] text-brand-ink">USD 2.1B in 2024, projected to USD 4.6B by 2030 (13.4% CAGR, 2025–2030).</p>
+        </div>
+        <div class="rounded-lg bg-brand-panel p-4 border border-brand-lightblue/40">
+          <p class="text-sm font-bold text-brand-navy">SAM — Android slice of that market</p>
+          <p class="text-[13px] text-brand-ink">Roughly $1.0B in 2024, est. 11.9% CAGR. A derived estimate from the GVR platform-share breakdown (iOS held 52.5%), not an independently published figure.</p>
+        </div>
+        <div class="rounded-lg bg-brand-navy p-4">
+          <p class="text-sm font-bold text-white mb-1">SOM — editable bottom-up calculation</p>
+          <p class="text-[13px] text-brand-mint leading-snug">[INSERT TARGET USERS] in launch markets (Pakistan, South Asia, MENA) × [INSERT ARPU]/yr = [INSERT] annual revenue opportunity.</p>
+          <p class="text-[10px] text-white/60 mt-2">Assumptions (editable): % of Android nutrition-app users who are sugar-conscious = [INSERT]; assumed free-to-paid conversion = [INSERT].</p>
+        </div>
+        <p class="text-[10px] font-bold uppercase tracking-wider text-brand-amber">SOM: Illustrative — not actual data</p>
+        <p class="text-[10px] text-brand-lightblue leading-snug">Source: Grand View Research, "Diet And Nutrition Apps Market Report." SAM is a derived estimate, not an independently published figure.</p>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 10 — BUSINESS MODEL ============ -->
+    <div class="slide flex-col justify-center bg-white p-14">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-2">Business Model &amp; Growth</p>
+      <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-6">Building a sustainable business.</h2>
+      <div class="grid grid-cols-2 gap-5 mb-5">
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-3">Proposed revenue streams</p>
+          <div class="space-y-2 text-[15px] text-brand-ink">
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-emerald"></span>Freemium subscription</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-emerald"></span>Premium AI-assisted food analysis</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-emerald"></span>Personalized nutrition insights</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-emerald"></span>Potential B2B / wellness partnerships</div>
+          </div>
+        </div>
+        <div class="rounded-xl bg-brand-panel p-6 border border-brand-lightblue/40">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-3">Acquisition channels</p>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-[15px] text-brand-ink">
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>Organic social</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>Health communities</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>University communities</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>Content marketing</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>Partnerships</div>
+            <div class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full bg-brand-brightblue"></span>Referrals</div>
+          </div>
+        </div>
+      </div>
+      <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-2">Editable KPI targets</p>
+      <div class="grid grid-cols-5 gap-3">
+        <div class="rounded-lg border border-brand-lightblue/40 p-3 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Monthly active users</p><p class="text-lg font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg border border-brand-lightblue/40 p-3 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Free-to-paid</p><p class="text-lg font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg border border-brand-lightblue/40 p-3 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Subscription price</p><p class="text-lg font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg border border-brand-lightblue/40 p-3 text-center"><p class="text-[11px] text-brand-lightblue mb-1">MRR</p><p class="text-lg font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg border border-brand-lightblue/40 p-3 text-center"><p class="text-[11px] text-brand-lightblue mb-1">CAC</p><p class="text-lg font-bold text-brand-navy">[INSERT]</p></div>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 11 — TRACTION & ROADMAP ============ -->
+    <div class="slide flex-col justify-center bg-white p-14">
+      <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-2">Traction &amp; Validation</p>
+      <h2 class="text-4xl font-bold text-brand-navy text-pretty mb-2">What we've built, and what comes next.</h2>
+      <div class="inline-flex items-center gap-2 mb-5 w-fit rounded-full bg-emerald-50 border border-brand-emerald/40 px-4 py-1.5">
+        <span class="h-2 w-2 rounded-full bg-brand-emerald"></span>
+        <p class="text-sm font-bold text-brand-navy">Android MVP developed — currently undergoing internal testing.</p>
+      </div>
+      <div class="grid grid-cols-5 gap-3 mb-8">
+        <div class="rounded-lg bg-brand-panel border border-brand-lightblue/40 p-4 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Registered testers</p><p class="text-xl font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg bg-brand-panel border border-brand-lightblue/40 p-4 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Active testers</p><p class="text-xl font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg bg-brand-panel border border-brand-lightblue/40 p-4 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Retention</p><p class="text-xl font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg bg-brand-panel border border-brand-lightblue/40 p-4 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Food logs created</p><p class="text-xl font-bold text-brand-navy">[INSERT]</p></div>
+        <div class="rounded-lg bg-brand-panel border border-brand-lightblue/40 p-4 text-center"><p class="text-[11px] text-brand-lightblue mb-1">Tester feedback</p><p class="text-sm font-bold text-brand-navy mt-1">[INSERT FEEDBACK]</p></div>
+      </div>
+      <p class="text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-4">Product development timeline</p>
+      <div class="flex items-center">
+        <div class="flex flex-col items-center flex-1">
+          <div class="h-5 w-5 rounded-full bg-brand-emerald ring-4 ring-emerald-100"></div>
+          <p class="mt-2 text-sm font-bold text-brand-navy">Concept</p>
+          <p class="text-[11px] text-brand-emerald font-bold">Done</p>
+        </div>
+        <div class="h-0.5 flex-1 bg-brand-emerald -mt-7"></div>
+        <div class="flex flex-col items-center flex-1">
+          <div class="h-5 w-5 rounded-full bg-brand-emerald ring-4 ring-emerald-100"></div>
+          <p class="mt-2 text-sm font-bold text-brand-navy">Design</p>
+          <p class="text-[11px] text-brand-emerald font-bold">Done</p>
+        </div>
+        <div class="h-0.5 flex-1 bg-brand-emerald -mt-7"></div>
+        <div class="flex flex-col items-center flex-1">
+          <div class="h-5 w-5 rounded-full bg-brand-emerald ring-4 ring-emerald-100"></div>
+          <p class="mt-2 text-sm font-bold text-brand-navy">Build (MVP)</p>
+          <p class="text-[11px] text-brand-emerald font-bold">Done</p>
+        </div>
+        <div class="h-0.5 flex-1 bg-brand-teal -mt-7"></div>
+        <div class="flex flex-col items-center flex-1">
+          <div class="h-5 w-5 rounded-full bg-brand-teal ring-4 ring-teal-100"></div>
+          <p class="mt-2 text-sm font-bold text-brand-navy">Internal testing</p>
+          <p class="text-[11px] text-brand-teal font-bold">Current</p>
+        </div>
+        <div class="h-0.5 flex-1 bg-brand-lightblue/40 -mt-7"></div>
+        <div class="flex flex-col items-center flex-1">
+          <div class="h-5 w-5 rounded-full bg-white border-2 border-brand-lightblue"></div>
+          <p class="mt-2 text-sm font-bold text-brand-ink">Launch</p>
+          <p class="text-[11px] text-brand-lightblue">Next</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 12 — COMPETITION & TEAM ============ -->
+    <div class="slide flex-row bg-white p-10">
+      <div class="w-[62%] flex flex-col justify-center pr-6">
+        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-teal mb-1">Competition &amp; Founding Team</p>
+        <h2 class="text-3xl font-bold text-brand-navy text-pretty mb-4">Why SugarKill, and why us?</h2>
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="text-[10px] uppercase tracking-wider text-brand-ink">
+              <th class="py-1.5 pr-2 font-bold">Criteria</th>
+              <th class="py-1.5 px-1 font-bold text-brand-navy bg-brand-mint/50 rounded-t">SugarKill</th>
+              <th class="py-1.5 px-1 font-bold">MyFitnessPal</th>
+              <th class="py-1.5 px-1 font-bold">Cronometer</th>
+              <th class="py-1.5 px-1 font-bold">YAZIO</th>
+            </tr>
+          </thead>
+          <tbody class="text-[11px] text-brand-ink">
+            <tr class="border-t border-brand-panel">
+              <td class="py-2 pr-2 font-semibold text-brand-navy">Added-sugar tracking (free tier)</td>
+              <td class="py-2 px-1 bg-brand-mint/20 font-bold text-brand-navy">Core (in MVP)</td>
+              <td class="py-2 px-1">Premium only</td>
+              <td class="py-2 px-1">Yes (curated data)</td>
+              <td class="py-2 px-1">No (free tier)</td>
+            </tr>
+            <tr class="border-t border-brand-panel">
+              <td class="py-2 pr-2 font-semibold text-brand-navy">AI food-photo ID</td>
+              <td class="py-2 px-1 bg-brand-mint/20 font-bold text-brand-navy">Core (in MVP)</td>
+              <td class="py-2 px-1">Premium ("Meal Scan")</td>
+              <td class="py-2 px-1">Paid Gold add-on</td>
+              <td class="py-2 px-1">Limited / unverified</td>
+            </tr>
+            <tr class="border-t border-brand-panel">
+              <td class="py-2 pr-2 font-semibold text-brand-navy">Gamification & progression</td>
+              <td class="py-2 px-1 bg-brand-mint/20 font-bold text-brand-navy">Core (in MVP)</td>
+              <td class="py-2 px-1">Minimal</td>
+              <td class="py-2 px-1">Minimal</td>
+              <td class="py-2 px-1">Fasting-focused</td>
+            </tr>
+            <tr class="border-t border-brand-panel">
+              <td class="py-2 pr-2 font-semibold text-brand-navy">Exercise + health-focus goals</td>
+              <td class="py-2 px-1 bg-brand-mint/20 font-bold text-brand-navy">Built in</td>
+              <td class="py-2 px-1">Exercise only</td>
+              <td class="py-2 px-1">Exercise only</td>
+              <td class="py-2 px-1">Plans / fasting</td>
+            </tr>
+            <tr class="border-t border-brand-panel">
+              <td class="py-2 pr-2 font-semibold text-brand-navy">Primary focus</td>
+              <td class="py-2 px-1 bg-brand-mint/20 font-bold text-brand-navy">Sugar + habits</td>
+              <td class="py-2 px-1">Calories / macros</td>
+              <td class="py-2 px-1">Micronutrient depth</td>
+              <td class="py-2 px-1">Meal plans / fasting</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="mt-3 text-[11px] text-brand-ink leading-snug"><strong class="text-brand-navy">Differentiation:</strong> SugarKill is built sugar-first (not calories-first), pairing AI food ID with gamified progression and exercise — while competitors treat sugar as one nutrient among many. The Android MVP is in internal testing today.</p>
+      </div>
+      <div class="w-[38%] flex flex-col justify-center pl-6 border-l border-brand-lightblue/40">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="h-16 w-16 rounded-full bg-brand-navy flex items-center justify-center text-2xl font-bold text-brand-mint">MR</div>
+          <div>
+            <p class="text-xl font-bold text-brand-navy">Murtaza Raza</p>
+            <p class="text-sm text-brand-ink">Founder · Pakistan</p>
+          </div>
+        </div>
+        <div class="space-y-3 text-[13px]">
+          <div><p class="text-[10px] uppercase tracking-wider text-brand-lightblue">Background</p><p class="text-brand-ink">[INSERT FOUNDER BACKGROUND]</p></div>
+          <div><p class="text-[10px] uppercase tracking-wider text-brand-lightblue">Technical expertise</p><p class="text-brand-ink">[INSERT TECHNICAL EXPERTISE]</p></div>
+          <div><p class="text-[10px] uppercase tracking-wider text-brand-lightblue">Why I started SugarKill</p><p class="text-brand-ink">[INSERT WHY I STARTED SUGARKILL]</p></div>
+          <div><p class="text-[10px] uppercase tracking-wider text-brand-lightblue">Why I'm the right person to build this</p><p class="text-brand-ink">[INSERT WHY I AM THE RIGHT PERSON]</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ SLIDE 13 — VISION, ROADMAP & ASK ============ -->
+    <div class="slide flex-col justify-center bg-brand-navy p-14">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="h-2 w-10 rounded-full bg-brand-emerald"></span>
+        <p class="text-[11px] font-bold uppercase tracking-[0.3em] text-brand-mint">Vision · Roadmap · The Ask</p>
+      </div>
+      <h2 class="text-4xl font-bold text-white text-pretty mb-1">Less Sugar. More Life.</h2>
+      <p class="text-base text-brand-lightblue mb-6">Our vision is to make healthier eating easier for people everywhere.</p>
+      <p class="text-[10px] font-bold uppercase tracking-wider text-brand-mint/80 mb-2">Proposed milestones</p>
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+          <p class="text-sm font-bold text-brand-mint mb-2">Next 6 months</p>
+          <ul class="space-y-1 text-[12px] text-white/80 list-disc list-inside">
+            <li>Complete internal testing</li>
+            <li>Strengthen food ID &amp; accuracy</li>
+            <li>Public Android launch</li>
+            <li>Validate engagement &amp; retention</li>
+          </ul>
+        </div>
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+          <p class="text-sm font-bold text-brand-mint mb-2">Next 12 months</p>
+          <ul class="space-y-1 text-[12px] text-white/80 list-disc list-inside">
+            <li>Build multi-user backend</li>
+            <li>Ship live leaderboards</li>
+            <li>Improve personalization</li>
+            <li>Validate the business model</li>
+          </ul>
+        </div>
+        <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+          <p class="text-sm font-bold text-brand-mint mb-2">Next 24 months</p>
+          <ul class="space-y-1 text-[12px] text-white/80 list-disc list-inside">
+            <li>Scale the platform</li>
+            <li>Explore new markets</li>
+            <li>Establish partnerships</li>
+            <li>Build a healthy-habit ecosystem</li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-5">
+        <div class="rounded-xl bg-brand-emerald/15 border border-brand-emerald/40 p-4">
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-mint mb-1">YC Objective</p>
+          <p class="text-sm text-white">[INSERT YC OBJECTIVE]</p>
+        </div>
+        <div class="rounded-xl bg-brand-emerald/15 border border-brand-emerald/40 p-4">
+          <p class="text-[10px] font-bold uppercase tracking-wider text-brand-mint mb-1">Thiel Fellowship Objective</p>
+          <p class="text-sm text-white">[INSERT THIEL FELLOWSHIP OBJECTIVE]</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-between border-t border-white/10 pt-4">
+        <p class="text-[13px] text-white/70">Murtaza Raza · mughalpathan2286@gmail.com · [INSERT WEBSITE]</p>
+        <p class="text-lg font-bold uppercase tracking-[0.25em] text-brand-mint">Less Sugar. More Life.</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav fixed bottom-6 right-6 flex items-center gap-3 z-50">
+      <span
+        class="text-sm tabular-nums"
+        style="color: rgba(0,0,0,0.5); text-shadow: 0 0 4px rgba(255,255,255,0.8)"
+      >
+        <span id="currentSlide">1</span> / <span id="totalSlides">1</span>
+      </span>
+      <button
+        onclick="prev()"
+        class="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-black/10 shadow-lg hover:bg-white/90 flex items-center justify-center text-neutral-700 hover:text-neutral-900 transition-all"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+      <button
+        onclick="next()"
+        class="w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-black/10 shadow-lg hover:bg-white/90 flex items-center justify-center text-neutral-700 hover:text-neutral-900 transition-all"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress fixed bottom-0 left-0 right-0 h-1 bg-black/10 backdrop-blur-sm z-50">
+      <div
+        id="progressBar"
+        class="h-full bg-brand-emerald transition-all duration-300"
+        style="width: 0%"
+      ></div>
+    </div>
+
+    <script>
+      let current = 0
+      const slides = document.querySelectorAll('.slide')
+      const total = slides.length
+
+      document.getElementById('totalSlides').textContent = total
+
+      function show(n) {
+        current = Math.max(0, Math.min(n, total - 1))
+        slides.forEach((s, i) => s.classList.toggle('active', i === current))
+        document.getElementById('currentSlide').textContent = current + 1
+        document.getElementById('progressBar').style.width = ((current + 1) / total) * 100 + '%'
+      }
+
+      function next() {
+        show(current + 1)
+      }
+      function prev() {
+        show(current - 1)
+      }
+
+      document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === ' ') next()
+        if (e.key === 'ArrowLeft') prev()
+        if (e.key === 'Home') show(0)
+        if (e.key === 'End') show(total - 1)
+      })
+
+      show(0)
+    </script>
+  </body>
+</html>
